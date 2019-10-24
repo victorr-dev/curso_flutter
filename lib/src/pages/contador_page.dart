@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 
-class HomePage extends StatelessWidget {
+ class ContadorPage extends StatefulWidget{
+   createState() => _ContadorPageState();
+ }
 
-  final sizeText = TextStyle(fontSize: 25);
-  final conteo = 10;
+ class _ContadorPageState extends State<ContadorPage> {
+    final sizeText = TextStyle(fontSize: 25);
+    int conteo = 10;
   
   @override
   Widget build(BuildContext context) {
@@ -25,9 +28,11 @@ class HomePage extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
         onPressed: () {
-          //conteo++;
+          setState(() {
+            conteo++;
+          });
         },
       ),
     );
   }
-}
+ }
