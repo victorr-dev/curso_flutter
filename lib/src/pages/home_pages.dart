@@ -17,8 +17,14 @@ class HomePage extends StatelessWidget {
           Text('numero de clicks:',style: sizeText),
           Text('0',style: sizeText)
         ],
-        
       ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add),
+        onPressed: () {
+          print('HolaMundo');
+        },
       ),
     );
   }
